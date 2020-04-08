@@ -1,0 +1,42 @@
+<div class="profile-card">
+  <h1 class="userName">{{person.userName}}</h1>
+  <h4 class="userDesignation">{{person.designation}}</h4>
+  <button *ngIf="isMinimized" (click)="toggleMinimize()">Expand</button>
+  <button *ngIf="!isMinimized" (click)="toggleMinimize()">Minimize</button>
+  <div *ngIf="!isMinimized">
+  <h5 class="userAddress">{{person.address}}</h5>
+  <div class="userContact" *ngIf="person.contact.length">
+    <p>Contact</p>
+    <div class="userContactInnerContent">
+      <p *ngFor="let value of person.contact">
+        {{value}}
+      </p>
+  </div>
+  </div>
+</div>
+</div>
+
+toggleMinimize(){
+    // this.isMinimized = false;
+    // Toggle the variable value
+    this.isMinimized = !this.isMinimized;
+  }
+
+toggle button code
+
+Banana in a Box syntax for syntax for box [(ngModel)]
+
+A shortcut for creating components:ng g c compName
+
+ng new routing-demo --routing
+
+
+adding this code at basic package clsass in spring microservice
+
+@Component
+            public class RestConfig extends WebMvcConfigurerAdapter {
+                @Override
+                    public void addCorsMappings(CorsRegistry registry) {
+                       registry.addMapping("/*").allowMethods("").allowOrigins("*");
+                    }
+                    }
